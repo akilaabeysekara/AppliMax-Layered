@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancMainContainerPlus" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.applimax.project.controller.DashboardController">
+   <children>
+      <AnchorPane prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #00003E;" AnchorPane.leftAnchor="287.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" layoutX="-21.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="lblDate" text="17/Aug/2025" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="18.0" prefWidth="32.0" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancMainContainer" layoutX="212.0" layoutY="8.0" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #7a239d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="287.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="1100.0" prefWidth="287.0" style="-fx-background-color: #00003E;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+         <children>
+            <ImageView fitHeight="126.0" fitWidth="298.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/AppliMaxLogo.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER" prefHeight="793.0" prefWidth="287.0">
+               <children>
+                  <Button fx:id="btnDashboard" mnemonicParsing="false" onAction="#btnDashboardOnAction" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #00003E;" text="Dashboard  " textFill="#74b9ff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCustomer" mnemonicParsing="false" onAction="#btnCustomerOnAction" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #00003E;" text="Customer    " textFill="#74b9ff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnItems" mnemonicParsing="false" onAction="#btnItemOnAction" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #00003E;" text="Item             " textFill="#74b9ff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnOrders" mnemonicParsing="false" onAction="#btnOrderOnAction" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #00003E;" text="Order           " textFill="#74b9ff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSupplier" mnemonicParsing="false" onAction="#btnSupplierOnAction" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #00003E;" text="Supplier       " textFill="#74b9ff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnInventory" mnemonicParsing="false" onAction="#btnInventoryOnAction" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #00003E;" text="Inventory   " textFill="#74b9ff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEmployee" mnemonicParsing="false" onAction="#btnEmployeeOnAction" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #00003E;" text="Employee    " textFill="#74b9ff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSales" mnemonicParsing="false" onAction="#btnSalesOnAction" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #00003E;" text="Sales             " textFill="#74b9ff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnReport" mnemonicParsing="false" onAction="#btnReportOnAction" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #00003E;" text="Report          " textFill="#74b9ff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnExpenses" mnemonicParsing="false" onAction="#btnExpensesOnAction" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #00003E;" text="Expenses     " textFill="#74b9ff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnUser" mnemonicParsing="false" onAction="#btnUserOnAction" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #00003E;" text="User              " textFill="#74b9ff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label prefHeight="150.0" prefWidth="200.0" />
+                  <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#btnLogoutOnAction" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #00003E;" text="Logout" textFill="#ff7979">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets right="25.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

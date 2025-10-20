@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import static com.applimax.project.model.AppUserModel.getString;
 
 
 public class CustomerModel {

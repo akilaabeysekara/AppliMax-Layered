@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import static com.applimax.project.model.AppUserModel.getString;
+
 public class EmployeeModel {
     public ArrayList<EmployeeDTO> getAllEmployee() throws SQLException, ClassNotFoundException {
         ResultSet resultSet = CrudUtil.execute("SELECT * FROM employee");

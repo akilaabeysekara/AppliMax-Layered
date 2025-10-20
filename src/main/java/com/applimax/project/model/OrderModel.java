@@ -9,6 +9,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import static com.applimax.project.model.AppUserModel.getString;
+
 public class OrderModel {
 
     private final OrderDetailModel orderDetailModel = new OrderDetailModel();

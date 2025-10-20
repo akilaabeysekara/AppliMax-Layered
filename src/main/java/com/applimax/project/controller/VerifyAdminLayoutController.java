@@ -13,14 +13,14 @@ import java.io.IOException;
 
 public class VerifyAdminLayoutController {
 
-    public AnchorPane ancVeryfyAdmin;
+    public AnchorPane ancVerifyAdmin;
     @FXML
     private Button loginButton;
 
     @FXML
     private PasswordField passwordField;
 
-    private static final String ADMIN_PASSWORD = "akila1234";
+    private static final String ADMIN_PASSWORD = "akila123";
 
     @FXML
     void onLog(KeyEvent event) {
@@ -48,11 +48,11 @@ public class VerifyAdminLayoutController {
 
     private void navigateTo(String path) {
         try {
-            ancVeryfyAdmin.getChildren().clear();
+            ancVerifyAdmin.getChildren().clear();
             AnchorPane anchorPane = FXMLLoader.load(getClass().getResource(path));
-            anchorPane.prefWidthProperty().bind(ancVeryfyAdmin.widthProperty());
-            anchorPane.prefHeightProperty().bind(ancVeryfyAdmin.heightProperty());
-            ancVeryfyAdmin.getChildren().add(anchorPane);
+            anchorPane.prefWidthProperty().bind(ancVerifyAdmin.widthProperty());
+            anchorPane.prefHeightProperty().bind(ancVerifyAdmin.heightProperty());
+            ancVerifyAdmin.getChildren().add(anchorPane);
         } catch (IOException e) {
             new Alert(Alert.AlertType.ERROR, "Page not found..!").show();
             e.printStackTrace();

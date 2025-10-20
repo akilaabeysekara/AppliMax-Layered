@@ -6,7 +6,7 @@ module com.elite.project {
     requires java.mail;
     requires net.sf.jasperreports.core;
     requires java.compiler;
-
+    requires mysql.connector.j;
 
 
     opens com.applimax.project.controller to javafx.fxml;

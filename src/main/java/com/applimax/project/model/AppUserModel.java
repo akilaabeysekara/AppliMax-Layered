@@ -38,13 +38,16 @@ public class AppUserModel {
 
         ResultSet resultSet = CrudUtil.execute("SELECT user_id FROM app_user ORDER BY user_id DESC LIMIT 1");
         char tableChar = 'U';
+        return getString(resultSet, tableChar);
+    }
+
+    static String getString(ResultSet resultSet, char tableChar) throws SQLException {
         if (resultSet.next()) {
             String lastId = resultSet.getString(1);
             String lastIdNUmberString = lastId.substring(1);
             int lastIdNumber = Integer.parseInt(lastIdNUmberString);
             int nextIdNumber = lastIdNumber + 1;
-            String nextIdString = String.format(tableChar + "%03d", nextIdNumber);
-            return nextIdString;
+            return String.format(tableChar + "%03d", nextIdNumber);
         }
         return tableChar + "001";
     }

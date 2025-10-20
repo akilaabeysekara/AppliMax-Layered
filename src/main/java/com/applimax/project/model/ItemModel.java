@@ -36,15 +36,7 @@ public class ItemModel {
 
         ResultSet resultSet = CrudUtil.execute("SELECT item_id FROM item ORDER BY item_id DESC LIMIT 1");
         char tableChar = 'I';
-        if (resultSet.next()) {
-            String lastId = resultSet.getString(1);
-            String lastIdNUmberString = lastId.substring(1);
-            int lastIdNumber = Integer.parseInt(lastIdNUmberString);
-            int nextIdNumber = lastIdNumber + 1;
-            String nextIdString = String.format(tableChar + "%03d", nextIdNumber);
-            return nextIdString;
-        }
-        return tableChar + "001";
+        return getString(resultSet, tableChar);
     }
 
     public boolean saveItem(ItemDTO itemDTO) throws SQLException, ClassNotFoundException {

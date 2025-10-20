@@ -35,15 +35,7 @@ public class CustomerModel {
 
         ResultSet resultSet = CrudUtil.execute("SELECT customer_id FROM customer ORDER BY customer_id DESC LIMIT 1");
         char tableChar = 'C';
-        if (resultSet.next()) {
-            String lastId = resultSet.getString(1);
-            String lastIdNUmberString = lastId.substring(1);
-            int lastIdNumber = Integer.parseInt(lastIdNUmberString);
-            int nextIdNumber = lastIdNumber + 1;
-            String nextIdString = String.format(tableChar + "%03d", nextIdNumber);
-            return nextIdString;
-        }
-        return tableChar + "001";
+        return getString(resultSet, tableChar);
     }
 
     public boolean saveCustomer(CustomerDTO customerDTO) throws SQLException, ClassNotFoundException {
